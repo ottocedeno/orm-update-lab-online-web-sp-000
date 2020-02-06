@@ -43,7 +43,7 @@ class Student
   end
 
   def self.new_from_db(row)
-    sql = "SELECT * FROM students"
+    self.new(row[1], row[2]).tap {|student| student.id = row[0]}
   end
 
 
