@@ -42,7 +42,7 @@ class Student
     Student.new(name, grade).tap {|student| student.save}
   end
 
-  def self.new_from_db
+  def self.new_from_db(row)
     sql = "SELECT * FROM students"
   end
 
